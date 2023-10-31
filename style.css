@@ -1,0 +1,61 @@
+
+@media only screen and (max-width: 1000px){
+    form {
+        width: 50% !important;
+    }
+}
+@media only screen and (max-width: 600px){
+    form {
+        width: 90% !important;
+    }
+}
+
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #22223B, #4A4E69, #9A8C98, #C9ADA7);
+    background-size: cover;
+}
+form{
+    border-radius: 1.2rem;
+    margin-top: 10%;
+    width: 25% !important;
+    background-color: #F2E9E4 !important;
+    padding: 2rem;
+    
+}
+.form-control{
+    background-color: #F2E9E4;
+    color: #4A4E69;
+    border: none;
+    border-bottom: 1px solid #4A4E69;
+    border-radius: 4px 4px 0 0;
+}
+.form-control:focus{
+    outline: none;
+    background-color: transparent;
+}
+.form-label{
+    font-weight: 400 !important;
+    color: #4A4E69;
+}
+.btn-primary{
+    color: #F2E9E4;
+    width: 100%;
+    border: none;
+    border-radius: 2rem;
+    background: linear-gradient(90deg, #22223B, #4A4E69, #9A8C98, #C9ADA7);    
+}
+h4{
+    color: #4A4E69;
+    font-size: 2rem !important;
+    font-weight: 700;
+}
+a{
+    color: #9A8C98;
+    text-decoration: none;
+}
+a:hover{
+    color: #4A4E69;
+}
+
