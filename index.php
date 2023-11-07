@@ -1,7 +1,7 @@
 <?php
 
 $username = $password = "";
-$usernameError = $passwordError = null;
+$usernameError = $passwordError = "";
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
