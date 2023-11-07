@@ -1,3 +1,9 @@
+<?php
+$username = $email = $password = $confirmPassword = "";
+$usernameError = $emailError = $passwordError = $confirmPasswordError = "";
+
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,16 +15,18 @@
   </head>
   <body>
         <div class="container-fluid">
-            <form class="mx-auto" id="signup-form">
+            <form class="mx-auto" id="signup-form" method="$_POST">
                 <h4 class="text-center">Sign Up</h4>
                 <div class="row mb-3 mt-5">
                     <div class="col">
                         <label for="" class="form-label">Username</label>
                         <input type="text" class="form-control">
+                        <div class="error"><?= $usernameError != null ?  $usernameError : null ?></div>
                     </div>
                     <div class="col">
                         <label for="" class="form-label">Email</label>
                         <input type="email" class="form-control">
+                        <div class="error"><?= $email != null ? $emailError : null ?></div>
                     </div>
                 </div>
                 <div class="mb-3 mt-3">

@@ -50,6 +50,9 @@ a{
 a:hover{
     color: #4A4E69;
 }
+.error{
+    color: red;
+}
 @media only screen and (max-width: 1000px){
     form {
         width: 50% !important;
