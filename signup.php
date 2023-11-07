@@ -1,9 +1,3 @@
-<?php
-$username = $email = $password = $confirmPassword = "";
-$usernameError = $emailError = $passwordError = $confirmPasswordError = "";
-
-
-?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -21,12 +15,10 @@ $usernameError = $emailError = $passwordError = $confirmPasswordError = "";
                     <div class="col">
                         <label for="" class="form-label">Username</label>
                         <input type="text" class="form-control">
-                        <div class="error"><?= $usernameError != null ?  $usernameError : null ?></div>
                     </div>
                     <div class="col">
                         <label for="" class="form-label">Email</label>
                         <input type="email" class="form-control">
-                        <div class="error"><?= $email != null ? $emailError : null ?></div>
                     </div>
                 </div>
                 <div class="mb-3 mt-3">
