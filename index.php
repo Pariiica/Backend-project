@@ -5,6 +5,7 @@ $usernameError = $passwordError = "";
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
   if (empty($_POST["username"])) {
     $usernameError = "Username is required";
   } else {
@@ -50,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
 
       <button type="submit" class="btn btn-primary mt-5">Login</button>
-      <div class="button-text mt-2 text-center"><a href="signup.html">Creat Account</a></div>
+      <div class="button-text mt-2 text-center"><a href="signup.php">Creat Account</a></div>
     </form>
   </div>
 </body>
