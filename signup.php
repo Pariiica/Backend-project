@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["username"])) {
     $usernameError = "Username is required";
   } else {
-    $username = $_POST["username"];
+    $username = test_input($_POST["username"]);
 
     if (!preg_match("/^[a-zA-Z-' ]*$/", $username)) {
       $usernameError = "Only letters and white space allowed";
@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["email"])) {
     $emailError = "Email is required";
   } else {
-    $email = $_POST["email"];
+    $email = test_input($_POST["email"]);
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $emailError = "Invalid email format";
@@ -42,7 +42,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   }
 }
-
+function test_input($data) {
+  $data = trim($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
 
 ?>
 <!doctype html>

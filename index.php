@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["username"])) {
     $usernameError = "Username is required";
   } else {
-    $username = $_POST["username"];
+    $username = test_input($_POST["username"]);
 
     if (!preg_match("/^[a-zA-Z-' ]*$/", $username)) {
       $usernameError = "Only letters and white space allowed";
