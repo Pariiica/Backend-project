@@ -1,4 +1,6 @@
 <?php
+include 'functions.php';
+
 $username = $email = $password = $confirmPassword = "";
 $usernameError = $emailError = $passwordError = $confirmPasswordError = "";
 
@@ -41,11 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $confirmPasswordError = "Passwords do not match";
     }
   }
-}
-function test_input($data) {
-  $data = trim($data);
-  $data = htmlspecialchars($data);
-  return $data;
 }
 
 ?>

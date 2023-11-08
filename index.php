@@ -1,4 +1,5 @@
 <?php
+include 'functions.php';
 
 $username = $password = "";
 $usernameError = $passwordError = "";
