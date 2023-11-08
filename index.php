@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
   <div class="container-fluid">
-    <form class="mx-auto" method="post">
+    <form class="mx-auto" method="POST" action="database.php">
       <h4 class="text-center">Login</h4>
       <div class="mb-3 mt-5">
         <label for="" class="form-label">Username</label>
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="error"><?= $passwordError ?></div>
       </div>
 
-      <button type="submit" class="btn btn-primary mt-5">Login</button>
+      <button type="submit" name="submit" class="btn btn-primary mt-5">Login</button>
       <div class="button-text mt-2 text-center"><a href="signup.php">Creat Account</a></div>
     </form>
   </div>

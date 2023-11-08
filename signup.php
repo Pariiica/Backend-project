@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
   <div class="container-fluid">
-    <form class="mx-auto" id="signup-form" method="post">
+    <form class="mx-auto" id="signup-form" method="POST" action="database.php">
       <h4 class="text-center">Sign Up</h4>
       <div class="row mb-3 mt-5">
         <div class="col">
@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="password" name="confirmPassword" class="form-control">
         <div class="error"><?= $confirmPasswordError ?></div>
       </div>
-      <button type="submit" class="btn btn-primary mt-5">Sign up</button>
+      <button type="submit" name="submit" class="btn btn-primary mt-5">Sign up</button>
       <div class="button-text mt-2 text-center"><a href="index.php">Login page</a></div>
     </form>
   </div>
