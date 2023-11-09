@@ -19,11 +19,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     VALUES ('$username', '$email', '$password')";
 
     $conn->query($sql);
-
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
 }
-$conn->close();
+
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
