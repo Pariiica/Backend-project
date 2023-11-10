@@ -12,9 +12,10 @@ if ($conn->connect_error) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $username =  $_REQUEST['username'];
-    $email = $_REQUEST['email'];
-    $password =  $_REQUEST['password'];
+    $username = mysqli_real_escape_string($conn, $_REQUEST['username']);
+    $email = mysqli_real_escape_string($conn, $_REQUEST['email']);
+    $password =  mysqli_real_escape_string($conn, $_REQUEST['password']);
+
     $sql = "INSERT INTO info (username, email, password)   
     VALUES ('$username', '$email', '$password')";
 
