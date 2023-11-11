@@ -18,9 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $sql = "INSERT INTO info (username, email, password)   
     VALUES ('$username', '$email', '$password')";
-
-    $conn->query($sql);
-
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
     } else {
